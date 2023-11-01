@@ -117,12 +117,12 @@ LOSSES = 0
 # Main game loop with restart option
 while True:
     if play_hangman():
-        wins += 1
+        WINS += 1
     else:
-        losses += 1
+        LOSSES += 1
 
     # Display win and loss counters
-    print(f"Total Wins: {wins}, Total Losses: {losses}")
+    print(f"Total Wins: {WINS}, Total Losses: {LOSSES}")
 
     play_again = input("Do you want to play again? (yes/no): ").lower()
     if play_again != "yes":

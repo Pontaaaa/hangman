@@ -28,7 +28,12 @@ def display_hangman(hangman_state):
 
 # Function to play the Hangman game
 def play_hangman():
-    # Ask the player to choose between easy or hard mode
+    """
+    play Hangman with user interaction.
+
+    Returns:
+        bool: true if the player wins and false if the player loses.
+    """
     while True:
         word_type = input("Choose game type (easy or hard): ").lower()
         if word_type == "easy":
@@ -106,8 +111,8 @@ player_name = input("What's your name? ")
 print(f"Hi {player_name}, welcome to Hangman!")
 
 # Initialize win and loss counters
-wins = 0
-losses = 0
+WINS = 0
+LOSSES = 0
 
 # Main game loop with restart option
 while True:

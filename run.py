@@ -2,8 +2,10 @@ import random
 import re
 
 # Lists of words for the game
-easy_words = ["lion", "tiger", "horse", "bear", "rabbit", "koala", "panda", "snake", "otter", "raccoon"]
-hard_words = ["kangaroo", "penguin", "cheetah", "dolphin", "chameleon", "platypus", "armadillo", "capybara", "fennec", "axolotl"]
+easy_words = ["lion", "tiger", "horse", "bear", "rabbit",
+             "koala", "panda", "snake", "otter", "raccoon"]
+hard_words = ["kangaroo", "penguin", "cheetah", "dolphin", "chameleon",
+             "platypus", "armadillo", "capybara", "fennec", "axolotl"]
 
 # Function to display the hangman figure
 def display_hangman(hangman_state):

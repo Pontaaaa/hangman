@@ -1,3 +1,7 @@
+"""
+hangman game
+"""
+
 import random
 import re
 

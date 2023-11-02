@@ -1,5 +1,5 @@
 """
-hangman game
+hangman Game
 """
 
 import random
@@ -29,13 +29,13 @@ def display_hangman(hangman_state):
 
     print(hangman_parts[hangman_state])
 
-# function to play the game
+# function to play hangman
 def play_hangman():
     """
     play hangman with user interaction.
 
     returns:
-        bool: true if the player wins and false if the player loses.
+        bool: True if the player wins and False if the player loses.
     """
     while True:
         word_type = input("Choose game type (easy or hard): ").lower()
@@ -48,14 +48,12 @@ def play_hangman():
         else:
             print("Invalid input. Please enter 'easy' or 'hard'.")
 
-    # randomly select word from word list
+    # choose a random word from the selected word list
     word = random.choice(words)
 
-    # max guesses
     guesses = ""
     max_attempts = 7
 
-    # initialize the hangman state
     hangman_state = 0
 
     display_hangman(hangman_state)
@@ -65,22 +63,21 @@ def play_hangman():
 
         display_word = ""
 
-        # for the letters in the word
         for letter in word:
             if letter in guesses:
-                display_word += letter  # letter has been guessed
+                display_word += letter  # the letter has been guessed
             else:
-                display_word += "_ "  # letter is not guessed yet
+                display_word += "_ "  # the letter is not guessed yet
 
         print(display_word)
 
-        # guess the letter
+        # ask player to guess a letter
         while True:
             guess = input("Guess a letter: ").lower()
             if re.match("^[a-z]$", guess) and guess not in guesses:
                 break
             elif guess in guesses:
-                print("You've already guessed that letter!")
+                print("You have already guessed that letter!")
             else:
                 print("Invalid input. Please enter a single letter.")
 
@@ -94,31 +91,42 @@ def play_hangman():
 
         display_hangman(hangman_state)
 
-        # if player has won
+        # check if player has won
         if set(word).issubset(set(guesses)):
             print(f"Congratulations {player_name}! You guessed the word: {word}")
             return True  # Return True for a win
 
-    # if player has lost
+    # if player has used all their attempts
     if max_attempts == 0:
         print(f"Out of attempts! The word was: {word}")
-        print(f"Sorry. {player_name}.")
+        print(f"Sorry, {player_name}.")
         return False  # Return False for a loss
 
-# ask player for their name and welcome them
+# introduction with rules
+print("Welcome to hangman!")
+print("Rules:")
+print("1. You can choose between 'easy' and 'hard' mode.")
+print("2. You have 7 attempts to guess the word.")
+print("3. You can only guess one letter at a time.")
+print("4. If you guess the word correctly, you win!")
+print("5. If you run out of attempts, you lose.")
+print("Let's begin!\n")
+
+# ask player for their name and validate it
 while True:
     player_name = input("What's your name? ")
     if re.match("^[a-zA-Z]*$", player_name):
         break
     else:
-        print("Invalid. Please only use letters.")
+        print("Invalid input. Please only use letters.")
 
-print(f"Hi {player_name}, welcome to Hangman!")
+print(f"Hi {player_name}, let's play Hangman!")
 
-# win, loss counters and restart option
+# win and loss counters
 WINS = 0
 LOSSES = 0
 
+# restart option
 while True:
     if play_hangman():
         WINS += 1

@@ -106,7 +106,13 @@ def play_hangman():
         return False  # Return False for a loss
 
 # ask player for their name and welcome them
-player_name = input("What's your name? ")
+while True:
+    player_name = input("What's your name? ")
+    if re.match("^[a-zA-Z]*$", player_name):
+        break
+    else:
+        print("Invalid. Please only use letters.")
+
 print(f"Hi {player_name}, welcome to Hangman!")
 
 # win, loss counters and restart option

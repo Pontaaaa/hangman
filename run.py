@@ -32,9 +32,9 @@ def display_hangman(hangman_state):
 # function to play the game
 def play_hangman():
     """
-    play Hangman with user interaction.
+    play hangman with user interaction.
 
-    Returns:
+    returns:
         bool: true if the player wins and false if the player loses.
     """
     while True:

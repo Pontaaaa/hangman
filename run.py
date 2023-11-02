@@ -48,32 +48,30 @@ def play_hangman():
         else:
             print("Invalid input. Please enter 'easy' or 'hard'.")
 
-    # randomly selected word from word list
+    # randomly select word from word list
     word = random.choice(words)
 
-    # initialize the variables
+    # max guesses
     guesses = ""
     max_attempts = 7
 
     # initialize the hangman state
     hangman_state = 0
 
-    # display the initial hangman
     display_hangman(hangman_state)
 
     # main game loop
     while max_attempts > 0:
-        # initialize the display word
+
         display_word = ""
 
         # for the letters in the word
         for letter in word:
             if letter in guesses:
-                display_word += letter  # The letter has been guessed
+                display_word += letter  # letter has been guessed
             else:
-                display_word += "_ "  # The letter is not guessed yet
+                display_word += "_ "  # letter is not guessed yet
 
-        # print the current state of the word
         print(display_word)
 
         # guess the letter
@@ -86,7 +84,6 @@ def play_hangman():
             else:
                 print("Invalid input. Please enter a single letter.")
 
-        # add the guess to the list of guesses
         guesses += guess
 
         # check if the guess is correct
@@ -95,15 +92,14 @@ def play_hangman():
             print(f"Wrong guess! {max_attempts} attempts left.")
             hangman_state += 1
 
-        # display the hangman
         display_hangman(hangman_state)
 
-        # check if player has won
+        # if player has won
         if set(word).issubset(set(guesses)):
             print(f"Congratulations {player_name}! You guessed the word: {word}")
             return True  # Return True for a win
 
-    # if player has used all their attempts
+    # if player has lost
     if max_attempts == 0:
         print(f"Out of attempts! The word was: {word}")
         print(f"Sorry. {player_name}.")
@@ -113,18 +109,16 @@ def play_hangman():
 player_name = input("What's your name? ")
 print(f"Hi {player_name}, welcome to Hangman!")
 
-# initialize win and loss counters
+# win, loss counters and restart option
 WINS = 0
 LOSSES = 0
 
-# restart option
 while True:
     if play_hangman():
         WINS += 1
     else:
         LOSSES += 1
 
-    # display win and loss counters
     print(f"Total Wins: {WINS}, Total Losses: {LOSSES}")
 
     play_again = input("Do you want to play again? (yes/no): ").lower()

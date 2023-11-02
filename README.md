@@ -1,31 +1,49 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hangman Game!
 
-Welcome USER_NAME,
+![Hangman Preview](assets/images/responsive.PNG.png)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## Overview
 
-## Reminders
+Welcome to Hangman! Hangman is a classic word guessing game where you try to guess a hidden word one letter at a time.
+With each incorrect guess, a part of a hangman figure is drawn. The game provides options for easy or hard difficulty and tracks your wins and losses.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Features
 
-## Creating the Heroku app
+### Existing Features
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+- **Rules**: Quickly learn the rules of Hangman before you begin.
+- **Name Entry**: Enter your name at the start to personalize the experience.
+- **Game Modes**: Choose between 'easy' and 'hard' mode to set the difficulty level.
+- **Gameplay**: Guess one letter at a time and try to uncover the hidden word.
+- **Hangman Display**: A visual representation of a hangman figure builds each time you make an incorrect guess.
+- **Win and Loss Tracking**: The game keeps track of your wins and losses.
+- **Restart**: Quickly play another round after finishing a game.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## How to Play
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+1. Select your preferred difficulty level: 'easy' or 'hard'.
+2. A word from the chosen category will be randomly selected as the hidden word.
+3. Guess the hidden word one letter at a time by typing your choice.
+4. You have seven attempts to guess the word.
+5. If you correctly guess all the letters in the word, you win. If you run out of attempts, you lose.
+6. The game keeps track of your wins and losses, which you can see at the end of each round.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## Technologies Used
 
-Connect your GitHub repository and deploy as normal.
+- Python
+- Regular Expressions (Regex)
+- Heroku (for deployment)
 
-## Constraints
+## Testing
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+imorgon
 
------
-Happy coding!
+## Deployment
+
+You can play the Hangman game by visiting the following link: [Hangman Game](https://hangman-game1-2a2cd8b9bd71.herokuapp.com)
+
+- The game is deployed using Heroku.
+
+## Credits
+
+This Hangman game was developed with love and logic by the community. Feel free to contribute and enhance the game further.

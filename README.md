@@ -1,6 +1,6 @@
 # Hangman Game!
 
-![Hangman Preview](assets/images/responsive.PNG.png)
+![Hangman Responsive](assets/images/responsive.PNG)
 
 ## Overview
 
@@ -8,8 +8,6 @@ Welcome to Hangman! Hangman is a classic word guessing game where you try to gue
 With each incorrect guess, a part of a hangman figure is drawn. The game provides options for easy or hard difficulty and tracks your wins and losses.
 
 ## Features
-
-### Existing Features
 
 - **Rules**: Quickly learn the rules of Hangman before you begin.
 - **Name Entry**: Enter your name at the start to personalize the experience.
@@ -43,11 +41,11 @@ This game has been validated using [Python Syntax Checker PEP8](https://www.pyth
 
 ### Game Testing
 
-The game has also been tested for while having human error in mind.
+The game has also been manually tested.
 
--No issues appear while using odd letters, symbols or numbers as input.
--The game is able to handle several inputs at once, and will deny them.
--Another round will only start if the user specificly says yes.
+- No issues appear while using odd letters, symbols or numbers as input.
+- The game is able to handle several inputs at once, and will deny them.
+- Another round will only start if the user specificly says yes.
 
 ## Deployment
 
@@ -65,6 +63,8 @@ The link to the GitHub repository can be found [here](https://github.com/Pontaaa
 * Template for the README was provided by [Code Institute (template)](https://github.com/Code-Institute-Solutions/readme-love-maths/blob/master/README.md?plain=1)
 
 ## Media
+
+![Hangman Figure](assets/images/hangmanfigures.PNG)
 
 [Hangman ascii art and wordbank](https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c)
 Hangman figure and art is from chrishorton on GitHub.

@@ -21,22 +21,33 @@ With each incorrect guess, a part of a hangman figure is drawn. The game provide
 
 ## How to Play
 
-1. Select your preferred difficulty level: 'easy' or 'hard'.
-2. A word from the chosen category will be randomly selected as the hidden word.
-3. Guess the hidden word one letter at a time by typing your choice.
-4. You have seven attempts to guess the word.
-5. If you correctly guess all the letters in the word, you win. If you run out of attempts, you lose.
-6. The game keeps track of your wins and losses, which you can see at the end of each round.
+1. Enter your name to start.
+2. Select your preferred difficulty level: 'easy' or 'hard'.
+3. A word from the chosen category will be randomly selected as the hidden word.
+4. Guess the hidden word one letter at a time by entering your choice.
+5. You have seven attempts to guess the word.
+6. If you correctly guess all the letters in the word, you win. If you run out of attempts, you lose.
+7. The game keeps track of your wins and losses, which you can see at the end of each round.
+
+![Rules](assets/images/rulesss.PNG)
 
 ## Technologies Used
 
 - Python
-- Regular Expressions (Regex)
+- Regex
 - Heroku (for deployment)
 
 ## Testing
 
-imorgon
+This game has been validated using [Python Syntax Checker PEP8](https://www.pythonchecker.com) and did not have any significant issues.
+
+### Game Testing
+
+The game has also been tested for while having human error in mind.
+
+-No issues appear while using odd letters, symbols or numbers as input.
+-The game is able to handle several inputs at once, and will deny them.
+-Another round will only start if the user specificly says yes.
 
 ## Deployment
 
@@ -44,6 +55,16 @@ You can play the Hangman game by visiting the following link: [Hangman Game](htt
 
 - The game is deployed using Heroku.
 
+The link to the GitHub repository can be found [here](https://github.com/Pontaaaa/hangman)
+
 ## Credits
 
-This Hangman game was developed with love and logic by the community. Feel free to contribute and enhance the game further.
+* Quick access to information and understanding through [W3Schools](https://www.w3schools.com/python/python_conditions.asp)
+* Finding out and understanding how to limit input for letters only from [StackOverflow](https://stackoverflow.com/questions/66629180/how-to-restrict-the-user-to-input-only-letters-and-numbers-in-python-3)
+* Figure for the Hangman is from [Hangman ascii art and wordbank](https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c)
+* Template for the README was provided by [Code Institute (template)](https://github.com/Code-Institute-Solutions/readme-love-maths/blob/master/README.md?plain=1)
+
+## Media
+
+[Hangman ascii art and wordbank](https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c)
+Hangman figure and art is from chrishorton on GitHub.
